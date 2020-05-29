@@ -23,6 +23,12 @@ app.get('/homecards', (req, res) => {
   });
 })
 
+app.get('/workscards', (req, res) => {
+  db.select('*').from('workscards').then(data => {
+    res.send(data);
+  });
+})
+
 app.get('/sfondignz', (req, res) => {
   db.select('url').from('sfondignz').then(data => {
     res.send(data);
