@@ -35,4 +35,4 @@ app.get('/sfondignz', (req, res) => {
   });
 })
 
-app.listen(proces.env.PORT || 3001, () => console.log(`App is running on port ${proces.env.PORT}`));
+app.listen(process.env.PORT || 3001, () => console.log(`App is running on port ${process.env.PORT}`));
