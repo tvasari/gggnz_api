@@ -2,12 +2,16 @@ const express = require('express');
 const cors = require('cors');
 const knex = require('knex');
 
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
+//process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
 const db = knex({
   client: 'pg',
   connection: {
-    connectionString: process.env.DATABASE_URL,
-    ssl: true
+    host: '127.0.0.1',
+    user: 'postgres',
+    password: 'test',
+    database: 'gggnz'
+    //connectionString: process.env.DATABASE_URL,
+    //ssl: true
   }
 });
 
@@ -34,4 +38,4 @@ app.get('/sfondignz', (req, res) => {
   });
 })
 
-app.listen(process.env.PORT || 3001, () => console.log(`App is running on port ${process.env.PORT}`));
+app.listen(process.env.PORT || 3001, () => console.log(`App is running on port ${3001/*process.env.PORT*/}`));
