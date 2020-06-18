@@ -35,4 +35,4 @@ app.get('/sfondignz', (req, res) => {
   });
 })
 
-app.listen(process.env.PORT || 3001, console.log(`listening to port ${process.env.PORT}`));
+app.listen(80, console.log(`listening to port 80`));
